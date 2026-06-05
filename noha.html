@@ -1,31 +1,76 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html>
 <head>
-  <title>Nohe</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body { font-family: Arial; background:#111; color:white; margin:0; }
-    header { background:#0b3d2e; padding:20px; text-align:center; }
-    .card { background:#222; margin:10px; padding:15px; border-radius:10px; }
-    iframe { width:100%; height:220px; }
-    a { color:white; text-decoration:none; }
-  </style>
-</head>
-<body>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noha Collection - Shia Media Hub</title><style>
+body{
+margin:0;
+background:#111;
+font-family:Arial,sans-serif;
+color:white;
+}
 
-<header><h2>Nohe Collection</h2></header>
+h1{
+text-align:center;
+padding:20px;
+}
 
-<div class="card">
-  <h3>Noha 1</h3>
-  <iframe src="https://www.youtube.com/embed/68d0LiqKjQCKT5D4></iframe>
-</div>
+.video-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:15px;
+padding:15px;
+}
 
-<div class="card">
-  <h3>Noha 2</h3>
-  <iframe src="https://www.youtube.com/embed/VIDEO_ID_4"></iframe>
-</div>
+.video-card{
+background:#1f1f1f;
+padding:10px;
+border-radius:12px;
+box-shadow:0 2px 10px rgba(0,0,0,0.4);
+}
 
-<a href="index.html">⬅ Back Home</a>
+.video-card iframe{
+width:100%;
+height:220px;
+border-radius:8px;
+}
+
+.video-title{
+text-align:center;
+padding-top:8px;
+font-weight:bold;
+}
+
+.back-btn{
+display:block;
+width:200px;
+margin:20px auto;
+padding:12px;
+background:#e74c3c;
+color:white;
+text-decoration:none;
+text-align:center;
+border-radius:10px;
+font-weight:bold;
+}
+</style></head><body><h1>🎤 Latest Noha Uploads</h1><div class="video-grid"><div class="video-card">
+<iframe src="https://www.youtube.com/embed/al0NW9tfkmk" allowfullscreen></iframe>
+<div class="video-title">Noha 1</div>
+</div><div class="video-card">
+<iframe src="https://www.youtube.com/embed/DIuGmBxdW0I" allowfullscreen></iframe>
+<div class="video-title">Noha 2</div>
+</div><div class="video-card">
+<iframe src="https://www.youtube.com/embed/-qm98i3lDKs" allowfullscreen></iframe>
+<div class="video-title">Noha 3</div>
+</div><div class="video-card">
+<iframe src="https://www.youtube.com/embed/v8-M4ot4U7g" allowfullscreen></iframe>
+<div class="video-title">Noha 4</div>
+</div><div class="video-card">
+<iframe src="https://www.youtube.com/embed/OQyPUCZrwuw" allowfullscreen></iframe>
+<div class="video-title">Noha 5</div>
+</div><div class="video-card">
+<iframe src="https://www.youtube.com/embed/XkgMo2i4b6Q" allowfullscreen></iframe>
+<div class="video-title">Noha 6</div>
+</div></div><a href="index.html" class="back-btn">🏠 Back to Home</a>
 
 </body>
 </html>
