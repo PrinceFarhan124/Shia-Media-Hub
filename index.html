@@ -1,7 +1,9 @@
 <!DOCTYPE html><html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Shia Media Hub</title><style>
+<title>Shia Media Hub</title>
+
+<style>
 body{
 margin:0;
 background:#0d0d0d;
@@ -31,6 +33,7 @@ color:#ccc;
 font-size:16px;
 }
 
+/* SEARCH BOX */
 .search-box{
 margin:20px;
 }
@@ -42,8 +45,10 @@ padding:14px;
 border:none;
 border-radius:12px;
 font-size:16px;
+outline:none;
 }
 
+/* MENU */
 .menu{
 width:90%;
 max-width:400px;
@@ -62,6 +67,7 @@ font-weight:bold;
 box-shadow:0 2px 8px rgba(0,0,0,0.3);
 }
 
+/* COLORS */
 .noha{background:#e74c3c;}
 .manqabat{background:#3498db;}
 .qaseeda{background:#27ae60;}
@@ -87,33 +93,76 @@ margin-top:30px;
 font-size:14px;
 color:#aaa;
 }
-</style></head><body><div class="header"><img src="logo.png" class="logo" alt="Shia Media Hub Logo"><h1>Shia Media Hub</h1><p class="subtitle">
-Noha • Manqabat • Qaseeda • Tilawat • Majalis
-</p></div><div class="search-box">
-<input type="text" placeholder="Search Noha, Manqabat, Tilawat...">
-</div><div class="menu"><a href="noha.html" class="noha">🎤 Noha</a>
+</style>
 
+</head>
+
+<body>
+
+<div class="header">
+<img src="logo.png" class="logo" alt="Shia Media Hub Logo">
+<h1>Shia Media Hub</h1>
+<p class="subtitle">Noha • Manqabat • Qaseeda • Tilawat • Majalis</p>
+</div>
+
+<!-- SEARCH -->
+<div class="search-box">
+<input type="text" id="searchInput" onkeyup="searchMenu()" placeholder="Search Noha, Manqabat, Majalis...">
+</div>
+
+<!-- MENU -->
+<div class="menu" id="menu">
+
+<a href="noha.html" class="noha">🎤 Noha</a>
 <a href="manqabat.html" class="manqabat">🎶 Manqabat</a>
-
 <a href="qaseeda.html" class="qaseeda">📜 Qaseeda</a>
-
 <a href="tilawat.html" class="tilawat">📖 Tilawat</a>
-
 <a href="majalis.html" class="majalis">🎙️ Majalis</a>
-
 <a href="photos.html" class="photos">🖼️ Islamic Photos</a>
-
 <a href="news.html" class="news">📰 Shia News</a>
-
 <a href="disclaimer.html" class="disclaimer">⚖️ Disclaimer</a>
 
-</div><div class="latest"><h2>Latest Uploads</h2><p>Add your latest Noha, Manqabat, Majalis and Tilawat content here.</p></div><div class="footer"><p> <div class="footer"><p>© 2026 Shia Media Hub</p><p><strong>Website Owner:</strong> Zawar Farhan Chandio</p><a href="https://wa.me/923451234567">
-<img src="whatsapp.png"
-alt="WhatsApp Contact"
-style="width:60px;height:60px;">
-</a><p>
+</div>
+
+<div class="latest">
+<h2>Latest Uploads</h2>
+<p>Add your latest Noha, Manqabat, Majalis and Tilawat content here.</p>
+</div>
+
+<div class="footer">
+<p>© 2026 Shia Media Hub</p>
+<p><strong>Website Owner:</strong> Zawar Farhan Chandio</p>
+
+<a href="https://wa.me/923451234567">
+<img src="whatsapp.png" alt="WhatsApp Contact" style="width:60px;height:60px;">
+</a>
+
+<p>
 <a href="https://wa.me/923313509963"
 style="color:#25D366;text-decoration:none;font-size:18px;font-weight:bold;">
 Contact on WhatsApp 923313509963
 </a>
-</p><p>All embedded videos belong to their respective owners.</p></div>
+</p>
+
+<p>All embedded videos belong to their respective owners.</p>
+</div>
+
+<script>
+function searchMenu(){
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let items = document.querySelectorAll(".menu a");
+
+    items.forEach(function(item){
+        let text = item.textContent.toLowerCase();
+
+        if(text.includes(input)){
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+    });
+}
+</script>
+
+</body>
+</html>
