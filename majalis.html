@@ -15,28 +15,26 @@ body{
 
 h1{
     text-align:center;
-    padding:20px;
+    padding:15px;
     margin:0;
 }
 
-/* GRID */
+/* GRID (FORCED 2 COLUMN EVERYWHERE) */
 .video-grid{
     display:grid;
     grid-template-columns:repeat(2, 1fr);
-    gap:15px;
-    padding:15px;
+    gap:12px;
+    padding:12px;
 }
 
-/* mobile responsive */
+/* KEEP 2 COLUMNS ON MOBILE TOO */
 @media(max-width:768px){
     .video-grid{
-        grid-template-columns:1fr;
+        grid-template-columns:repeat(2, 1fr);
     }
 }
 
-/* video box */
 .video{
-    position:relative;
     width:100%;
     aspect-ratio:16/9;
     background:#000;
