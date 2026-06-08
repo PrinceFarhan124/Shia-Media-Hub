@@ -34,7 +34,7 @@ color:#ccc;
 font-size:16px;
 }
 
-/* SEARCH */
+/* SEARCH BOX */
 .search-box{
 margin:20px;
 }
@@ -96,8 +96,8 @@ font-size:14px;
 color:#aaa;
 }
 
-/* hide helper */
-.hidden{
+/* HIDE CLASS */
+.hide{
 display:none !important;
 }
 </style>
@@ -114,7 +114,7 @@ display:none !important;
 
 <!-- SEARCH -->
 <div class="search-box">
-<input type="text" id="searchInput" placeholder="Search Noha, Majalis..." onkeyup="searchMenu()">
+<input type="text" id="searchInput" placeholder="Search content..." onkeyup="searchMenu()">
 </div>
 
 <!-- MENU -->
@@ -162,10 +162,10 @@ function searchMenu(){
 
         let text = item.textContent.toLowerCase();
 
-        if(text.includes(input)){
-            item.classList.remove("hidden");
+        if(text.indexOf(input) > -1){
+            item.classList.remove("hide");
         } else {
-            item.classList.add("hidden");
+            item.classList.add("hide");
         }
 
     });
