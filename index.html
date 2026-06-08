@@ -34,7 +34,7 @@ color:#ccc;
 font-size:16px;
 }
 
-/* SEARCH BOX */
+/* SEARCH */
 .search-box{
 margin:20px;
 }
@@ -66,7 +66,6 @@ color:white;
 font-size:18px;
 font-weight:bold;
 box-shadow:0 2px 8px rgba(0,0,0,0.3);
-transition:0.2s;
 }
 
 /* COLORS */
@@ -95,11 +94,6 @@ margin-top:30px;
 font-size:14px;
 color:#aaa;
 }
-
-/* HIDE CLASS */
-.hide{
-display:none !important;
-}
 </style>
 
 </head>
@@ -114,11 +108,11 @@ display:none !important;
 
 <!-- SEARCH -->
 <div class="search-box">
-<input type="text" id="searchInput" placeholder="Search content..." onkeyup="searchMenu()">
+<input type="text" id="searchInput" placeholder="Search content...">
 </div>
 
 <!-- MENU -->
-<div class="menu">
+<div class="menu" id="menu">
 
 <a href="noha.html" class="noha">🎤 Noha</a>
 <a href="manqabat.html" class="manqabat">🎶 Manqabat</a>
@@ -154,22 +148,26 @@ Contact on WhatsApp
 </div>
 
 <script>
-function searchMenu(){
-    let input = document.getElementById("searchInput").value.toLowerCase();
-    let items = document.querySelectorAll(".menu a");
+const input = document.getElementById("searchInput");
+const items = document.querySelectorAll(".menu a");
 
-    items.forEach(function(item){
+input.addEventListener("input", function () {
+
+    let value = this.value.toLowerCase();
+
+    items.forEach(function (item) {
 
         let text = item.textContent.toLowerCase();
 
-        if(text.indexOf(input) > -1){
-            item.classList.remove("hide");
+        if (text.includes(value)) {
+            item.style.display = "block";
         } else {
-            item.classList.add("hide");
+            item.style.display = "none";
         }
 
     });
-}
+
+});
 </script>
 
 </body>
