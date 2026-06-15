@@ -1,3 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>اعلانات</title>
 
-<h1>Announcements</h1>
-<a href="anjuman-home.html">Back</a>
+<style>
+body{
+    margin:0;
+    background:#0d0d0d;
+    color:white;
+    font-family:Arial,sans-serif;
+    text-align:center;
+}
+
+h1{
+    padding:20px;
+    margin:0;
+}
+
+.grid{
+    width:95%;
+    max-width:800px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:15px;
+    padding:15px;
+}
+
+.card{
+    background:#1f1f1f;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 2px 8px rgba(0,0,0,0.4);
+}
+
+.card img{
+    width:100%;
+    display:block;
+}
+
+.card p{
+    padding:12px;
+    margin:0;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.back{
+    display:inline-block;
+    margin:20px;
+    padding:12px 20px;
+    background:#555;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<h1>📢 اعلانات</h1>
+
+<div class="grid">
+
+    <div class="card">
+        <img src="uploaded-images/ashra.jpg" alt="Ashra Announcement">
+        <p>اعلاناتِ عشرہ</p>
+    </div>
+
+</div>
+
+<a href="anjuman-home.html" class="back">🔙 واپس جائیں</a>
+
+</body>
+</html>
